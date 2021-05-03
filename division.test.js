@@ -5,7 +5,7 @@ test('divide 10 / 2 to equal 5', () => {
 });
 
 test('divide 10 / 3 to equal 3.33', () => {
-  expect(division(10, 3)).toBe(3.3333333333333335);
+  expect(division(10, 3)).toBeCloseTo(3.33);
 });
 
 test('divide true / 2 to equal 0.5', () => {
