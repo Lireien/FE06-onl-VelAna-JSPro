@@ -1,4 +1,2 @@
-function subtraction(a,b) {
-  return a - b;
-  }
-  module.exports = subtraction;
+const subtraction = (a,b) => a - b;
+module.exports = subtraction;

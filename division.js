@@ -1,4 +1,2 @@
-function division (a,b) {
-  return a / b;
-  }
-  module.exports = division;
+const division = (a,b) => a / b;  
+module.exports = division;
