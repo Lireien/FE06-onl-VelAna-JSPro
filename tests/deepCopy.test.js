@@ -1,6 +1,6 @@
 const deepCopy = require('../js/deepcopy');
 
-test('copy obj to deepObj', () => {
+test('copy obj to deepObj', () =>{
   const obj = {
     a:1,
     b:3,
