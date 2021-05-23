@@ -3,7 +3,7 @@ const mutatingMethods = ['copyWithin', 'fill', 'map', 'push', 'pop', 'reverse', 
 const nonMutatingMethods = methods.filter(m => typeof Array.prototype[m]).filter(m => !mutatingMethods.includes(m));
 //console.log('mut ' + mutatingMethods,'; nonMut ' + nonMutatingMethods);
 const mainSectionElement = document.querySelector('#with-tooltip');
-const slowSectionElement = document.querySelector('#with-tooltip-slow');
+const bodyElement = document.querySelector('body');
 
 const renderList = (section, listTooltip, data) => {
   const list = document.createElement('li');
@@ -18,6 +18,8 @@ if (mainSectionElement) {
   //headers
   const mutatingHeaderElement = document.createElement('h2');
   const nonMutatingHeaderElement = document.createElement('h2');
+  mutatingHeaderElement.classList.add('mutating');
+  nonMutatingHeaderElement.classList.add('non-mutating');
   mutatingHeaderElement.textContent = 'Mutating methods' ;
   nonMutatingHeaderElement.textContent = 'Non-mutating methods';
   //Insertion
@@ -44,16 +46,35 @@ if (!mainSectionElement){
 }
 
 //tooltip
-const tooltipWindow = document.createElement('div');
-tooltipWindow.classList.add('tooltip-active');
-mainSectionElement.append(tooltipWindow);
+const tooltipElement = document.createElement('div');
+tooltipElement.classList.add('tooltip');
+mainSectionElement.append(tooltipElement);
 methodElements = document.querySelectorAll('li');
 
 const appearingTooltip = (evt) => {
-  tooltipWindow.classList.toggle('tooltip-active');
-  tooltipWindow.textContent = `${evt.target.dataset.tooltip}`;
-}
-methodElements.forEach(m => 
-  m.addEventListener(mouseover, appearingTooltip));
+  tooltipElement.style.display = "block";
+  tooltipElement.innerHTML = `${evt.target.dataset.tooltip}`;
+  let target = evt.target;
+  let coords = target.getBoundingClientRect();
 
+      let left = coords.left + (target.offsetWidth - tooltipElement.offsetWidth) - 5;
+      if (left < 0) left = 0; 
+
+      let top = coords.top - tooltipElement.offsetHeight - 5;
+      if (top < 0) { 
+        top = coords.top + target.offsetHeight + 5;
+      }
+
+      tooltipElement.style.left = left + 'px';
+      tooltipElement.style.top = top + 'px';
+  
+}
+const fadingTooltip = (evt) => {
+  tooltipElement.style.display = "none";
+}
+methodElements.forEach(m => {
+  m.addEventListener('mouseover', appearingTooltip)});
+methodElements.forEach(m =>{
+  m.addEventListener('mouseout', fadingTooltip)
+});
 

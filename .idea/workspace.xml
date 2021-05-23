@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="194fa2e0-837d-43e1-afd0-7353bc58bc98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/division.js" beforeDir="false" afterPath="$PROJECT_DIR$/division.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiply.js" beforeDir="false" afterPath="$PROJECT_DIR$/multiply.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subtraction.js" beforeDir="false" afterPath="$PROJECT_DIR$/subtraction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sum.js" beforeDir="false" afterPath="$PROJECT_DIR$/sum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621246984309</updated>
       <workItem from="1621247008284" duration="116000" />
+      <workItem from="1621778015424" duration="61000" />
     </task>
     <servers />
   </component>
