@@ -1,4 +1,4 @@
-const roughCopy = require('../js/roughCopy');
+import roughCopy from './roughCopy';
 test('copy obj to roughObj', () =>{
   const obj = {
     a:1,

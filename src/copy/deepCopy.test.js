@@ -1,4 +1,4 @@
-const deepCopy = require('../js/deepcopy');
+import deepCopy from './deepcopy';
 
 test('copy obj to deepObj', () =>{
   const obj = {

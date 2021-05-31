@@ -1,2 +1,2 @@
 const subtraction = (a,b) => a - b;
-module.exports = subtraction;
+export default subtraction;

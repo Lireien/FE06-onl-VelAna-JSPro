@@ -3,4 +3,4 @@ function roughCopy(obj){
   return copyObj;
   }
   
-  module.exports = roughCopy;
+  export default roughCopy;

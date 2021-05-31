@@ -1,5 +1,6 @@
-import cloneDeep from 'lodash/cloneDeep';
-const lodashCloneDeep = require('../js/lodashCloneDeep');
+import _ from 'lodash';
+import lodashCloneDeep from './lodashCloneDeep';
+
 test('copy obj to cloneDeep', () =>{
   const obj = {
     a:1,
@@ -11,7 +12,7 @@ test('copy obj to cloneDeep', () =>{
         p: 'deep', 
         r: 'copy' }
   };
-  const cloneDeep = lodashCloneDeep(obj);
+  const cloneDeep = _.cloneDeep(obj);
   expect(cloneDeep).toEqual(obj);
   
 })

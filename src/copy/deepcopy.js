@@ -21,4 +21,4 @@ function deepCopy(obj){
 }
 const deepObj = deepCopy(obj);
 
-module.exports = deepCopy;
+export default deepCopy;

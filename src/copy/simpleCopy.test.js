@@ -1,4 +1,4 @@
-const simpleCopy = require('../js/simpleCopy');
+import simpleCopy from './simpleCopy';
 test('copy obj to simpleObj', () =>{
   const obj = {
     a:1,
