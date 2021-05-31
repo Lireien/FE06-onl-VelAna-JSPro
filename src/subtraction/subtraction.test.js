@@ -1,4 +1,4 @@
-const subtraction = require('../js/subtraction');
+const subtraction = require('./subtraction');
 
 test('subtract  5 - 2 to equal 3', () => {
   expect(subtraction(5, 2)).toBe(3);
