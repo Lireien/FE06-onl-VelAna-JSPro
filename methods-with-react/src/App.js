@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import List from "./components/List";
 import Header from "./components/Header";
+
 
 
 const headerTitle = `Let's now a little about methods in JS with React!`
@@ -17,7 +17,7 @@ function App() {
         <List list = {nonMutatingMethods} title = "Non mutating"/>
 
       </section>
-    </div>
+       </div>
   );
 }
 

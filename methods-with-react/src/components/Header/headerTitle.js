@@ -1,6 +1,12 @@
 import React from "react";
+import styled from "styled-components";
+
+const StyledDesc = styled.p`
+  color: #61dafb;
+`
+
 const HeaderTitle = ({title}) =>
-    <p className="Header-description">
+    <StyledDesc className="Header-description">
         {title}
-    </p>
+    </StyledDesc>
 export default HeaderTitle;
