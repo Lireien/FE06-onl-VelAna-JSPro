@@ -1,6 +1,7 @@
 import './App.css';
 import List from "./components/List";
 import Header from "./components/Header";
+import Tooltip from "./components/Tooltip";
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <List list = {nonMutatingMethods} title = "Non mutating"/>
 
       </section>
+    <Tooltip/>
        </div>
   );
 }
