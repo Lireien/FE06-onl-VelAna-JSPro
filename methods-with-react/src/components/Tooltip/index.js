@@ -22,8 +22,8 @@ class Tooltip extends Component {
     this.setState({
       isVisible: true,
       text: closestParent.dataset.tooltip,
-      top: scrollY + top,
-      left: scrollX + left,
+      top: scrollY + top + 10,
+      left: scrollX + left - 110,
     });
   };
 
