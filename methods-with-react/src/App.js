@@ -2,20 +2,21 @@ import "./App.css";
 import List from "./components/List";
 import Header from "./components/Header";
 import Tooltip from "./components/Tooltip";
+import { theme } from "./styles";
 import { LIST_TYPES } from "./const";
-import { listFilter } from "./helpers";
 import { useState } from "react";
+import { Context } from "./Context/context";
+import { ThemeProvider } from "styled-components";
 
 function App() {
-  const headerTitle = `Let's now a little about methods in JS with React!`;
-  const [methods, setList] = useState(
+  const [list, setList] = useState(
     Object.getOwnPropertyNames(Array.prototype).map((m) => ({
       name: m,
       type: LIST_TYPES.MAIN,
     }))
   );
   const changeItemTypeByName = (type, name) => (event) => {
-    const newList = [...methods];
+    const newList = [...list];
     const elementIndex = newList.findIndex((i) => i.name === name);
     newList[elementIndex] = { ...newList[elementIndex], type };
     setList(newList);
@@ -23,25 +24,17 @@ function App() {
 
   return (
     <div className="Methods">
-      <Header title={headerTitle} />
-      <section className="Methods-body">
-        <List
-          list={[...methods].filter(listFilter(LIST_TYPES.MUTATING))}
-          title={LIST_TYPES.MUTATING}
-          changeType={changeItemTypeByName}
-        />
-        <List
-          list={[...methods].filter(listFilter(LIST_TYPES.MAIN))}
-          title={LIST_TYPES.MAIN}
-          changeType={changeItemTypeByName}
-        />
-        <List
-          list={[...methods].filter(listFilter(LIST_TYPES.NON_MUTATING))}
-          title={LIST_TYPES.NON_MUTATING}
-          changeType={changeItemTypeByName}
-        />
-      </section>
-      <Tooltip />
+      <ThemeProvider theme={theme}>
+        <Context.Provider value={{ changeItemTypeByName, list }}>
+          <Header />
+          <section className="Methods-body">
+            <List title={LIST_TYPES.MUTATING} />
+            <List title={LIST_TYPES.MAIN} />
+            <List title={LIST_TYPES.NON_MUTATING} />
+          </section>
+          <Tooltip />
+        </Context.Provider>
+      </ThemeProvider>
     </div>
   );
 }

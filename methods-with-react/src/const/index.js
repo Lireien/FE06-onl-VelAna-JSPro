@@ -3,3 +3,4 @@ export const LIST_TYPES = {
   MUTATING: "Mutating",
   NON_MUTATING: "Non mutating",
 };
+export const TITLE_HEADER = `Let's now a little about methods in JS with React!`;

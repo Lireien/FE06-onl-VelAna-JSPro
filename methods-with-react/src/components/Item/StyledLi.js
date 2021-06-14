@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const StyledLi = styled.li`
   cursor: pointer;
-  padding-top: 10px;
+  margin: 2px;
+  padding: 10px 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
+  border: 1px solid lightgrey;
   &:hover {
     color: mediumspringgreen;
   }

@@ -9,7 +9,6 @@ export const StyledRow = styled.div`
 export const StyledUl = styled.ul`
   color: #61dafb;
   font-weight: normal;
-  border: 2px solid lightgrey;
   padding: 10px 20px;
   width: 200px;
 `;

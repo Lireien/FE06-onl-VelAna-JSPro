@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./logo";
 import HeaderTitle from "./headerTitle";
+import { TITLE_HEADER } from "../../const";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
@@ -11,14 +12,15 @@ const StyledHeader = styled.header`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #61dafb;
-`
+`;
 
-const Header = ({title}) => {
-return(
+const Header = ({ title }) => {
+  return (
     <StyledHeader className="App-header">
-        <h1>Methods</h1>
-        <Logo/>
-        <HeaderTitle title = {title}/>
-    </StyledHeader>);
+      <h1>Methods</h1>
+      <Logo />
+      <HeaderTitle title={TITLE_HEADER} />
+    </StyledHeader>
+  );
 };
 export default Header;
