@@ -1,9 +1,11 @@
 .App {
   text-align: center;
-}
+  }
 
 .Methods {
-  background-color: #282c34;
+  color: slategrey;
+  text-align: center;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +16,6 @@
 .Methods-body {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 30px;
 }
 
 @keyframes App-logo-spin {

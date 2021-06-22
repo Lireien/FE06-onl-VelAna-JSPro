@@ -1,12 +1,15 @@
 import "./App.css";
-import List from "./components/List";
+import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header";
 import Tooltip from "./components/Tooltip";
 import { theme } from "./styles";
 import { LIST_TYPES } from "./const";
 import { useState } from "react";
-import { Context } from "./Context/context";
+import Context from "./Context/context";
 import { ThemeProvider } from "styled-components";
+import Footer from "./components/Footer";
+import Main from "./components/pages/Main";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 function App() {
   const [list, setList] = useState(
@@ -26,13 +29,13 @@ function App() {
     <div className="Methods">
       <ThemeProvider theme={theme}>
         <Context.Provider value={{ changeItemTypeByName, list }}>
-          <Header />
-          <section className="Methods-body">
-            <List title={LIST_TYPES.MUTATING} />
-            <List title={LIST_TYPES.MAIN} />
-            <List title={LIST_TYPES.NON_MUTATING} />
-          </section>
-          <Tooltip />
+          <Router>
+            <Header />
+            <Breadcrumbs />
+            <Main />
+            <Footer />
+            <Tooltip />
+          </Router>
         </Context.Provider>
       </ThemeProvider>
     </div>

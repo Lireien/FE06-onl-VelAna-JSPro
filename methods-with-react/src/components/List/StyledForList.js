@@ -7,15 +7,12 @@ export const StyledRow = styled.div`
 `;
 
 export const StyledUl = styled.ul`
-  color: #61dafb;
+  color: ${(props) => props.theme.textColor};
   font-weight: normal;
   padding: 10px 20px;
   width: 200px;
 `;
 export const StyledH2 = styled.h2`
-  color: #61dafb;
-`;
-export const StyledInput = styled.input`
-  border: 2px solid #61dafb;
-  width: 150px;
+  padding-top: 20px;
+  color: ${(props) => props.theme.textColor};
 `;

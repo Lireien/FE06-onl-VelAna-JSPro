@@ -7,7 +7,7 @@ export const StyledLi = styled.li`
   list-style: none;
   display: flex;
   justify-content: space-between;
-  border: 1px solid lightgrey;
+  border: 1px solid ${(props) => props.theme.bordersColor};
   &:hover {
     color: mediumspringgreen;
   }
