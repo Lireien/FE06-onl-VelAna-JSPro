@@ -4,7 +4,7 @@ import StyledSection from "./StyledSection";
 
 const Tests = () => {
   return (
-    <StyledSection className="Methods-body">
+    <StyledSection>
       <List title={LIST_TYPES.MUTATING} />
       <List title={LIST_TYPES.MAIN} />
       <List title={LIST_TYPES.NON_MUTATING} />

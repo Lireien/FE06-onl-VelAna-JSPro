@@ -1,3 +1,5 @@
 .activeLink {
-    color: darkturquoise;
+    color: #231696;
+    font-weight: bold;
+    text-decoration: none;
 }

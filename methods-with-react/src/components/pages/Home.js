@@ -1,8 +1,6 @@
-import StyledSection from "./StyledSection";
-
 const Home = () => (
-  <StyledSection>
+  <div>
     <div> This is a home page </div>
-  </StyledSection>
+  </div>
 );
 export default Home;

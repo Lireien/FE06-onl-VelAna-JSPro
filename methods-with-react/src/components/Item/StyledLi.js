@@ -9,13 +9,14 @@ export const StyledLi = styled.li`
   justify-content: space-between;
   border: 1px solid ${(props) => props.theme.bordersColor};
   &:hover {
-    color: mediumspringgreen;
+    color: #2813e5;
+    font-weight: 500;
   }
 `;
 export const StyledButton = styled.button`
   margin: 0px 5px;
   padding: 5px;
   &:hover {
-    border: 2px solid mediumspringgreen;
+    border: 2px solid #2813e5;
   }
 `;

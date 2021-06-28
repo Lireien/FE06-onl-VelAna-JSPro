@@ -1,8 +1,2 @@
-import StyledSection from "./StyledSection";
-
-const Error = () => (
-  <StyledSection>
-    <h1> You've got an error!</h1>
-  </StyledSection>
-);
+const Error = () => <h1> You've got an error!</h1>;
 export default Error;

@@ -3,7 +3,8 @@ const isDay = now.getHours() > 8 && now.getHours() < 18;
 export const theme = isDay
   ? {
       mode: "light",
-      mainBackgroundColor: "#c8f6f7",
+      mainBackgroundColor: "#767391",
+      backgroundColor: "#D6D3F2",
       textColor: "#282c34",
       bordersColor: "#2c3682",
     }

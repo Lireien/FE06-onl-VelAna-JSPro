@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledDesc = styled.p`
   color: ${(props) => props.theme.textColor};
   font-weight: bold;
-  font-size: 20px;
+  font-size: 0.8em;
 `;
 
 const HeaderTitle = ({ title }) => (

@@ -10,4 +10,5 @@ export const StyledBreadUl = styled.ul`
   padding-inline-start: 0px;
   text-align: center;
 `;
+// export const
 export default StyledBreadLi;

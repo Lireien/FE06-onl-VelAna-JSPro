@@ -7,6 +7,8 @@ import { LIST_TYPES } from "./const";
 import { useState } from "react";
 import Context from "./Context/context";
 import { ThemeProvider } from "styled-components";
+import { Provider } from "react-redux";
+import store from "./store";
 import Footer from "./components/Footer";
 import Main from "./components/pages/Main";
 import Breadcrumbs from "./components/Breadcrumbs";
@@ -29,13 +31,14 @@ function App() {
     <div className="Methods">
       <ThemeProvider theme={theme}>
         <Context.Provider value={{ changeItemTypeByName, list }}>
-          <Router>
-            <Header />
-            <Breadcrumbs />
-            <Main />
-            <Footer />
-            <Tooltip />
-          </Router>
+          <Provider store={store}>
+            <Router>
+              <Header />
+              <Main />
+              <Footer />
+              <Tooltip />
+            </Router>
+          </Provider>
         </Context.Provider>
       </ThemeProvider>
     </div>
