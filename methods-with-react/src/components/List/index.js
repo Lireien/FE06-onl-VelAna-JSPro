@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Item from "../Item";
-import { StyledH2, StyledRow, StyledUl } from "./StyledForList";
-import { listFilter } from "../../helpers";
-import Context from "../../Context/context";
+import {StyledH2, StyledRow, StyledUl} from "./StyledForList";
+import {listFilter} from "../../helpers";
 import Input from "../Input";
+import {useSelector} from "react-redux";
 
 const List = ({ title }) => {
-  const { list } = useContext(Context);
+  const list = useSelector(state => state.list);
   const iList = list.filter(listFilter(title));
   const [filter, setFilter] = useState("");
   const listFilterer = (i) => i.name.includes(filter);

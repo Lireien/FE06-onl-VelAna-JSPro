@@ -7,14 +7,16 @@ export const StyledLi = styled.li`
   list-style: none;
   display: flex;
   justify-content: space-between;
+  background-color: ${(props) => props.theme.liBgColor};
   border: 1px solid ${(props) => props.theme.bordersColor};
+  border-radius: 4px;
   &:hover {
     color: #2813e5;
     font-weight: 500;
   }
 `;
 export const StyledButton = styled.button`
-  margin: 0px 5px;
+  margin: 0 5px;
   padding: 5px;
   &:hover {
     border: 2px solid #2813e5;

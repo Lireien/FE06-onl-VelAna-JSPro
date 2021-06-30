@@ -10,7 +10,7 @@ const Breadcrumbs = () => {
       <StyledBreadLi to="/"> ⚝ </StyledBreadLi>
       {crumbs.map((i) => (
         <StyledBreadLi key={i}>
-          <Lnk to={`/${i}`}>{i}</Lnk>
+          <Lnk to={`/${i}`}> {i}</Lnk>
         </StyledBreadLi>
       ))}
     </StyledBreadUl>

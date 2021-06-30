@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { LIST_TYPES } from "../const";
 import { changeItemTypeByName } from "../helpers";
 
-const list = createSlice({
+export const list = createSlice({
   name: "list",
   initialState: Object.getOwnPropertyNames(Array.prototype).map((m) => ({
     name: m,

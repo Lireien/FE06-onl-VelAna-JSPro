@@ -23,7 +23,7 @@ class Tooltip extends Component {
       isVisible: true,
       text: closestParent.dataset.tooltip,
       top: scrollY + top + 10,
-      left: scrollX + left - 110,
+      left: scrollX + left - 40,
     });
   };
 

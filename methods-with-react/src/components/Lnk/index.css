@@ -1,5 +1,6 @@
 .activeLink {
     color: #845ec1;
     font-weight: bold;
+    font-size: 1.5em;
     text-decoration: none;
 }

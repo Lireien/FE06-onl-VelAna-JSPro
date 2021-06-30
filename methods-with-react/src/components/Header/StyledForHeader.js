@@ -14,7 +14,7 @@ export const StyledHeader = styled.header`
 `;
 export const StyledH1 = styled.h1`
   text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
 `;
 
 export const StyledRow = styled.ul`

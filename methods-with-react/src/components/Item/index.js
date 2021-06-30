@@ -1,17 +1,17 @@
-import { StyledButton, StyledLi } from "./StyledLi";
-import { LIST_TYPES } from "../../const";
-import { useContext } from "react";
-import Context from "../../Context/context";
+import {StyledButton, StyledLi} from "./StyledLi";
+import {LIST_TYPES} from "../../const";
+import {useDispatch} from "react-redux";
+import {changeType} from "../../store/list";
 
 const Item = ({ item }) => {
-  const { changeItemTypeByName: changeType } = useContext(Context);
+  const dispatch = useDispatch();
   return (
     <StyledLi data-tooltip={item.name}>
-      <StyledButton onClick={changeType(LIST_TYPES.MUTATING, item.name)}>
+      <StyledButton onClick={() => dispatch(changeType({name: item.name, type: LIST_TYPES.MUTATING}))}>
         ⇦
       </StyledButton>
       {` ${item.name} `}
-      <StyledButton onClick={changeType(LIST_TYPES.NON_MUTATING, item.name)}>
+      <StyledButton onClick={() => dispatch(changeType({name: item.name, type: LIST_TYPES.NON_MUTATING}))}>
         ⇨
       </StyledButton>
     </StyledLi>
