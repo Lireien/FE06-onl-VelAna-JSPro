@@ -3,7 +3,6 @@ import {LIST_TYPES} from "../../const";
 import {useDispatch} from "react-redux";
 import {changeType} from "../../store/list";
 import {useCallback} from "react";
-import {StyledMethodsContainer} from "../List/StyledForList";
 import {increment} from "../../store/counter";
 
 const Item = ({ item }) => {
