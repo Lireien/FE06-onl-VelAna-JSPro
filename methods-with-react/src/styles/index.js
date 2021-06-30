@@ -1,5 +1,5 @@
 const now = new Date();
-const isDay = now.getHours() > 8 && now.getHours() < 19;
+const isDay = now.getHours() > 8 && now.getHours() < 18;
 export const theme = isDay
   ? {
       mode: "light",

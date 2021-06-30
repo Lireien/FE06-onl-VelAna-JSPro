@@ -11,8 +11,9 @@ export const StyledLi = styled.li`
   background-color: ${(props) => props.theme.liBgColor};
   border: 1px solid ${(props) => props.theme.bordersColor};
   border-radius: 4px;
+
   &:hover {
-    color: #2813e5;
+    color: #c168e8;
     font-weight: 500;
   }
 `;
@@ -20,7 +21,7 @@ export const StyledButton = styled.button`
   margin: 0 5px;
   padding: 5px;
   &:hover {
-    border: 2px solid #2813e5;
+    border: 2px solid ${(props) => props.theme.bordersColor};
   }
 `;
 export const StyledButtonRemove = styled(StyledButton)`
