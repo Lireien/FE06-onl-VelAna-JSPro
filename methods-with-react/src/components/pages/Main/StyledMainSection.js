@@ -7,5 +7,5 @@ const StyledMainSection = styled.section`
   align-items: center;
   height: 100%;
   width: 100%;
-`;
+  `;
 export default StyledMainSection;
