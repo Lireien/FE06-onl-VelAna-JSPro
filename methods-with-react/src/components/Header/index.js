@@ -1,10 +1,9 @@
 import React from "react";
 import Logo from "./logo";
 import HeaderTitle from "./headerTitle";
-import { TITLE_HEADER } from "../../const";
-import NavLink from "../Lnk";
-import { StyledH1, StyledHeader, StyledRow } from "./StyledForHeader";
-import { LINK_PATH } from "../../helpers/routes";
+import {TITLE_HEADER} from "../../const";
+import {StyledH1, StyledHeader, StyledRow} from "./StyledForHeader";
+import {LINK_PATH} from "../../helpers/routes";
 import StyledNavLink from "../../styles/StyledNavLink";
 
 const Header = ({ title }) => {

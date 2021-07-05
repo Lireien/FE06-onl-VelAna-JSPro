@@ -18,6 +18,6 @@ export const theme = isDay
       textColor: "#c8f6f7",
       bordersColor: "#26bfbf",
       linkColors:"#8fcacb",
-      activeLinkColor:"#caa3ec",
+      activeLinkColor:"white",
       liBgColor:  "#706d7f",
     };

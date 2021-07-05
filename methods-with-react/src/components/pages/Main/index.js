@@ -7,13 +7,13 @@ import Error from "../Error";
 import Counter from "../../Counter";
 import Breadcrumbs from "../../Breadcrumbs";
 import StyledMainSection from "./StyledMainSection";
-import {CounterPage} from "../Counter";
+import {CounterPage} from "../CounterPage";
+import React from "react";
 
 const Main = () => {
   return (
     <StyledMainSection>
       <Breadcrumbs />
-      <Counter />
       <Switch>
         <Route exact path={LINK_PATH.home} component={Home} />
         <Route path={LINK_PATH.tests} component={Tests} />

@@ -1,6 +1,7 @@
+import React from "react";
 import styled from "styled-components";
 
-export const StyledLi = styled.li`
+const StyledLi = styled.li`
   position: relative;
   cursor: pointer;
   margin: 2px;
@@ -30,3 +31,4 @@ export const StyledButtonRemove = styled(StyledButton)`
   color: red;
   font-weight: bold;
 `;
+export default StyledLi;

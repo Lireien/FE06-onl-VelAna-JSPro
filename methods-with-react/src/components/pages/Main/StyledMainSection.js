@@ -7,5 +7,6 @@ const StyledMainSection = styled.section`
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow: hidden scroll;
   `;
 export default StyledMainSection;

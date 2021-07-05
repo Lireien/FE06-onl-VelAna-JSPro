@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledBreadLi = styled.li`
-  color: #a699cd;
+  color: #ffffff;
   font-weight: bold;
   list-style: none;
   display: inline-block;

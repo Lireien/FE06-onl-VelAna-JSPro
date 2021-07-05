@@ -8,6 +8,7 @@ import {Provider} from "react-redux";
 import store from "./store";
 import Footer from "./components/Footer";
 import Main from "./components/pages/Main";
+import React from "react";
 
 function App() {
 
