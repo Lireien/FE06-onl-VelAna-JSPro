@@ -6,7 +6,8 @@ import Input from "../Input";
 import {useSelector} from "react-redux";
 import {LIST_TYPES} from "../../const";
 
-const List = ({title}) => {
+
+const List = ({title, isMovable}) => {
     const list = useSelector(state => state.list);
     const iList = list.filter(listFilter(title));
     const [filter, setFilter] = useState("");
@@ -27,7 +28,11 @@ const List = ({title}) => {
             <Input value={filter} onChange={handleFilterChange}/>
             <StyledUl>
                 {items.map((i) => (
-                    <Item key={i.name} item={i} isMain={title===LIST_TYPES.MAIN}/>
+                    <Item key={i.name}
+                          item={i}
+                          isMain={title === LIST_TYPES.MAIN}
+                          isMovable={isMovable}
+                                              />
                 ))}
             </StyledUl>
         </StyledRow>

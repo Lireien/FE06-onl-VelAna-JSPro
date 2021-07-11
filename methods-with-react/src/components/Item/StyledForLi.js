@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const StyledLi = styled.li`
@@ -8,19 +7,19 @@ const StyledLi = styled.li`
   padding: 10px 0;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content:  ${(props) =>
+          props.isMovable ? "space-between" : "center"};
+  text-align: center;
   background-color: ${(props) => props.theme.liBgColor};
   border: 1px solid ${(props) => props.theme.bordersColor};
   border-radius: 4px;
-
-  &:hover {
-    color: #c168e8;
-    font-weight: 500;
+   
   }
 `;
 export const StyledButton = styled.button`
   margin: 0 5px;
   padding: 5px;
+
   &:hover {
     border: 2px solid ${(props) => props.theme.bordersColor};
   }
@@ -31,4 +30,14 @@ export const StyledButtonRemove = styled(StyledButton)`
   color: red;
   font-weight: bold;
 `;
+export const StyledA = styled.a`{
+  color: ${(props) => props.theme.linkColors};
+  text-decoration: none;
+};
+&:hover {
+  font-weight: 700;
+}
+&:visited {
+  color: ${(props) => props.theme.linkColors}
+}`
 export default StyledLi;

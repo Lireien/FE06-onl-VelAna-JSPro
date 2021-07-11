@@ -1,6 +1,8 @@
+import StyledSection from "./StyledSection";
+
 const Home = () => (
-  <div>
-    <div> This is a home page </div>
-  </div>
+  <StyledSection>
+    <div> Welcome to JavaScript array methods studying!  </div>
+  </StyledSection>
 );
 export default Home;
