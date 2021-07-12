@@ -7,6 +7,6 @@ const StyledSection = styled.div`
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.textColor};
   width: 100%;
-  min-height: 390px;
+  height: 100%;
 `;
 export default StyledSection;
