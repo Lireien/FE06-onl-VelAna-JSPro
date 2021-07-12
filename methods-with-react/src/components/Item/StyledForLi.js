@@ -33,6 +33,8 @@ export const StyledButtonRemove = styled(StyledButton)`
 export const StyledA = styled.a`{
   color: ${(props) => props.theme.linkColors};
   text-decoration: none;
+  font-family: Orbitron, Serif;
+  font-weight: normal;
 };
 &:hover {
   font-weight: 700;

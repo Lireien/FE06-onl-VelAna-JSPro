@@ -8,7 +8,7 @@ const Breadcrumbs = () => {
     const crumbs = pathname.split("/").filter((i) => i);
     return (
         <StyledBreadUl>
-            <StyledBreadLi to="/"> 🏠 </StyledBreadLi>
+            <StyledBreadLi to="/"> ⏏ </StyledBreadLi>
             {crumbs.map((i, index) => (
                 <StyledBreadLi key={i}>
                     <Lnk to={`/${crumbs.slice(0, index + 1).join("/")}`}>{`➮ ${i}`}</Lnk>

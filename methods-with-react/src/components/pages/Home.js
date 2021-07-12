@@ -2,7 +2,7 @@ import StyledSection from "./StyledSection";
 
 const Home = () => (
   <StyledSection>
-    <div> Welcome to JavaScript array methods studying!  </div>
+      <div> <h3>Welcome to JavaScript array methods studying!</h3>  </div>
   </StyledSection>
 );
 export default Home;

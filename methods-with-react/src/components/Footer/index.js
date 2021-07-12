@@ -5,15 +5,15 @@ import Counter from "../Counter";
 
 const StyledFooter = styled.footer`
   background-color: ${(props) => props.theme.mainBackgroundColor};
-  width:100%;
-  position: fixed;
-  bottom:0px;
-  z-index:50;
-  padding: 5px 10px;
+   
+  padding: 5px 0px;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2 vmin);
+  font-family: Orbitron, Serif;
+  font-weight: normal;
+  font-size: calc(10px + 1vmin);
   color: ${(props) => props.theme.textColor};
 `;
 

@@ -21,8 +21,8 @@ function App() {
               <Header />
               <Main />
               <Footer />
-              <Tooltip />
             </Router>
+            <Tooltip />
           </Provider>
       </ThemeProvider>
     </div>

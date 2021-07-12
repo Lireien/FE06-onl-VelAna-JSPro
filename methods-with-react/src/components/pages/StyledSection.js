@@ -6,6 +6,7 @@ const StyledSection = styled.div`
   justify-content: space-around;
   background-color: ${(props) => props.theme.backgroundColor};
   color: ${(props) => props.theme.textColor};
-  width: 95%;
+  width: 100%;
+  min-height: 390px;
 `;
 export default StyledSection;

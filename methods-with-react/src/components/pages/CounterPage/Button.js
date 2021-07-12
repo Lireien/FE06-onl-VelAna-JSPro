@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
   margin:10px  5px;
+  font-family: Orbitron, Serif;
+  font-size: 12px;
+  font-weight: bold;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.bordersColor};
-  font-weight: bold;
+ 
   background-color: ${(props) => props.theme.mainBackgroundColor};
   color: ${(props) => props.theme.textColor};
 `;

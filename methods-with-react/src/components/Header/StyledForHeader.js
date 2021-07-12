@@ -4,17 +4,17 @@ export const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.mainBackgroundColor};
   box-shadow: 0px -10px black;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: ${(props) => props.theme.textColor};
-  padding: 20px;
-  //border-bottom: 2px solid lime;
+  padding: 10px;
 `;
 export const StyledH1 = styled.h1`
   text-align: center;
-  font-size: 1.5em;
+  font-family: Orbitron, Serif;
+  font-weight: 900;
+  font-size: 1.3em;
 `;
 
 export const StyledRow = styled.ul`

@@ -6,7 +6,9 @@ const activeClassName = "nav-item-active";
 const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   margin: 5px;
   text-decoration: none;
+  font-family: Orbitron, Serif;
   font-weight: 500;
+  font-size: 22px;
   color: ${(props) => props.theme.linkColors};
   &.${activeClassName} {
     color: ${(props) => props.theme.activeLinkColor};

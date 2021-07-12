@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const StyledDesc = styled.p`
   color: ${(props) => props.theme.textColor};
-  font-weight: bold;
-  font-size: 1em;
+  font-family: Orbitron,Serif;
+  font-weight: 700;
+  font-size: 0.7em;
 `;
 
 const HeaderTitle = ({ title }) => (

@@ -15,6 +15,8 @@ export const StyledUl = styled.ul`
   width: 95%;
 `;
 export const StyledH2 = styled.h2`
+  font-family: Orbitron, Serif;
+  font-weight: bold ;
   padding-top: 20px;
   color: ${(props) => props.theme.textColor};
 `;
