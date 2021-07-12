@@ -7,7 +7,7 @@ import {useSelector} from "react-redux";
 import {LIST_TYPES} from "../../const";
 
 
-const List = ({title, isMovable}) => {
+const List = ({title, isMovable, isLinkable}) => {
     const list = useSelector(state => state.list);
     const iList = list.filter(listFilter(title));
     const [filter, setFilter] = useState("");
@@ -32,6 +32,7 @@ const List = ({title, isMovable}) => {
                           item={i}
                           isMain={title === LIST_TYPES.MAIN}
                           isMovable={isMovable}
+                          isLinkable={isLinkable}
                                               />
                 ))}
             </StyledUl>

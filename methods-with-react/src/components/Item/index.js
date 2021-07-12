@@ -7,7 +7,7 @@ import {checkMethod} from "../../helpers/methodsDivision";
 import {COUNTERS_TYPES} from "../../helpers/counters";
 import {changeType} from "../../store/list";
 
-const Item = ({item, isMain, isMovable = true}) => {
+const Item = ({item, isMain, isMovable = true, isLinkable = true}) => {
     const dispatch = useDispatch();
     const withCounter = (type) => () =>
         dispatch((dispatch) => {
@@ -29,14 +29,15 @@ const Item = ({item, isMain, isMovable = true}) => {
             data-tooltip={item.name}
             isMain={isMain}
             isMovable={isMovable}
+            isLinkable={isLinkable}
 
         >
             {isMovable && <StyledButton onClick={changeTypeToM}>
                 ⇦
             </StyledButton>}
-           <StyledA
+            { isLinkable ? <StyledA
                 href={`https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/${item.name}`}>
-                {` ${item.name} `}</StyledA>
+                {` ${item.name} `}</StyledA> :` ${item.name}` }
 
             {isMovable && <StyledButton onClick={changeTypeToN}>
                 ⇨
