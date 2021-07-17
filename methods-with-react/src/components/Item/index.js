@@ -7,7 +7,7 @@ import {checkMethod} from "../../helpers/methodsDivision";
 import {COUNTERS_TYPES} from "../../helpers/counters";
 import {changeType} from "../../store/list";
 
-const Item = ({item, isMain, isMovable = true, isLinkable = true}) => {
+const Item = ({item, isMain, isMovable = true, isLinkable = true, isConstructor}) => {
     const dispatch = useDispatch();
     const withCounter = (type) => () =>
         dispatch((dispatch) => {
@@ -30,14 +30,19 @@ const Item = ({item, isMain, isMovable = true, isLinkable = true}) => {
             isMain={isMain}
             isMovable={isMovable}
             isLinkable={isLinkable}
+            isConstructor={isConstructor}
 
         >
             {isMovable && <StyledButton onClick={changeTypeToM}>
                 ⇦
             </StyledButton>}
-            { isLinkable ? <StyledA
+            {isLinkable  && !isConstructor ? <StyledA
                 href={`https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/${item.name}`}>
-                {` ${item.name} `}</StyledA> :` ${item.name}` }
+                {` ${item.name} `}</StyledA>
+                : isLinkable && isConstructor ? <StyledA
+                href={`https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/${item.name}`}>
+                {` ${item.name} `} </StyledA>
+                : ` ${item.name}`}
 
             {isMovable && <StyledButton onClick={changeTypeToN}>
                 ⇨
