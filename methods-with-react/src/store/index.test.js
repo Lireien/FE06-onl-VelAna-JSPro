@@ -1,4 +1,4 @@
-import store from "../store"
+import store from "./index"
 
 describe("store MAIN test", () => {
     ["dispatch", "subscribe", "getState"].forEach((m) => {

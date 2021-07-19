@@ -5,4 +5,5 @@ export const LINK_PATH = {
   methods: "/methods",
   method: "/method/:name",
   counter: "/counter",
+  solution:"/solution",
 };

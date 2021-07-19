@@ -1,9 +1,9 @@
 // import { render, screen } from '@testing-library/react';
-// import List from "./List";
+// import TItem from "./TItem";
 //
 //
 // test('render lists', () => {
-//     render(<List />);
+//     render(<TItem />);
 //     const listElement = screen.getByText(/methods-list/i);
 //     expect(listElement).toBeInTheDocument();
 // });

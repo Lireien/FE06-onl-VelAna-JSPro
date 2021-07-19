@@ -8,7 +8,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   text-decoration: none;
   font-family: Orbitron, Serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 1em;
   color: ${(props) => props.theme.linkColors};
   &.${activeClassName} {
     color: ${(props) => props.theme.activeLinkColor};
