@@ -1,5 +1,5 @@
 export const LINK_PATH = {
-  tests: "/tests",
+  game: "/game",
   test: "/tests/:id",
   home: "/",
   methods: "/methods",

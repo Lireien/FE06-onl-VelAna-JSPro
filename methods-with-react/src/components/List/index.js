@@ -34,7 +34,7 @@ const List = ({title, isMovable, isLinkable}) => {
                           isMovable={isMovable}
                           isLinkable={isLinkable}
                           isConstructor={i.name === 'constructor'}
-                                              />
+                          />
                 ))}
             </StyledUl>
         </StyledRow>

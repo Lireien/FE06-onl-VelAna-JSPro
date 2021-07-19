@@ -4,12 +4,8 @@ import list from "./list";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 
-const store = configureStore({
+export default configureStore({
   reducer: { counter, list },
   middleware: [thunk, logger],
 });
 
-export type RootState = ReturnType<typeof store.getState>
-
-export type AppDispatch = typeof store.dispatch
-export default store;

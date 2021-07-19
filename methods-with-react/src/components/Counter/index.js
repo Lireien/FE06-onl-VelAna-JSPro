@@ -1,5 +1,4 @@
 import {useSelector} from "react-redux";
-import React from "react";
 import {StyledCountContainer, StyledSpanError, StyledSpanSuccess, StyledSpanValue} from "./StyledSpans";
 
 const Counter = () => {

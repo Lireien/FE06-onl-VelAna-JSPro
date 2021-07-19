@@ -1,5 +1,5 @@
-import React from "react";
 import styled from "styled-components";
+import {TTitle} from "../../interfaces/TTitle";
 
 const StyledDesc = styled.p`
   color: ${(props) => props.theme.textColor};
@@ -8,7 +8,11 @@ const StyledDesc = styled.p`
   font-size: 0.7em;
 `;
 
-const HeaderTitle = ({ title }) => (
+interface Props {
+    title :TTitle,
+}
+
+const HeaderTitle = ({ title }: Props) => (
   <StyledDesc className="Header-description">{title}</StyledDesc>
 );
 export default HeaderTitle;

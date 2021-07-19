@@ -11,7 +11,7 @@ export const list = createSlice({
   reducers: {
     changeType: (state, { payload }) => {
       if (!payload) return state;
-      const { name, type } = payload;
+      const { name, type, error } = payload;
       return changeItemTypeByName(state, name, type);
     },
   },

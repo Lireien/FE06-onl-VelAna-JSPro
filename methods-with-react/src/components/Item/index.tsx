@@ -1,33 +1,27 @@
 import StyledLi, {StyledA, StyledButton, StyledButtonRemove} from "./StyledForLi";
 import {LIST_TYPES} from "../../const";
+import {useDispatch} from "react-redux";
 import {useCallback} from "react";
 import {increment} from "../../store/counter";
 import {checkMethod} from "../../helpers/methodsDivision";
 import {COUNTERS_TYPES} from "../../helpers/counters";
 import {changeType} from "../../store/list";
-import {itemType} from "../../interfaces/TItem";
-import {Dispatch} from "@reduxjs/toolkit";
-import {useAppDispatch} from "../../hooks";
+import {itemType, TItem} from "../../interfaces/TItem";
 
 
 interface Props {
-    item: itemType;
-    isMain?: boolean;
-    isMovable?: boolean;
-    isLinkable?: boolean;
-    isConstructor?: boolean;
-    name: string;
+    item: TItem;
+    isMain: boolean,
+    isMovable: boolean,
+    isLinkable: boolean,
+    isConstructor: boolean,
 }
 
-const Item = ({item, isMain, isMovable = true, isLinkable = true, isConstructor, name}: Props) => {
-    const dispatch = useAppDispatch();
-
-
+const Item = ({item, isMain, isMovable = true, isLinkable = true, isConstructor}: Props) => {
+    const dispatch = useDispatch();
     const withCounter = (type: itemType) => () =>
-        // @ts-ignore
-        dispatch((dispatch: Dispatch<any>) => {
-
-            const {name}: any = item;
+        dispatch((dispatch) => {
+            const {name} = item;
             const isAllMethods = type === LIST_TYPES.MAIN;
             const isError = !isAllMethods && checkMethod(name, type);
 
@@ -35,36 +29,32 @@ const Item = ({item, isMain, isMovable = true, isLinkable = true, isConstructor,
             !isAllMethods && !isError && dispatch(increment(COUNTERS_TYPES.success));
             isAllMethods && dispatch(increment(COUNTERS_TYPES.value));
 
-
-            dispatch(changeType({name, type, error: isError}));
+            dispatch(changeType({name: item.name, type, error: isError}));
         });
-
-    const changeTypeToM = useCallback(withCounter(LIST_TYPES.MUTATING), [name]);
-
-    const changeTypeToN = useCallback(withCounter(LIST_TYPES.NON_MUTATING), [name]);
-
-    const changeTypeToMethods = useCallback(withCounter(LIST_TYPES.MAIN), [name]);
-
+    const changeTypeToM = useCallback(withCounter(LIST_TYPES.MUTATING), [item.name]);
+    const changeTypeToN = useCallback(withCounter(LIST_TYPES.NON_MUTATING), [item.name]);
+    const changeTypeToMethods = useCallback(withCounter(LIST_TYPES.MAIN), [item.name]);
 
     return (
         <StyledLi
-            data-tooltip={name}
+            // @ts-ignore
             isMain={isMain}
             isMovable={isMovable}
             isLinkable={isLinkable}
             isConstructor={isConstructor}
+            data-tooltip={item.name}
 
         >
             {isMovable && <StyledButton onClick={changeTypeToM}>
                 ⇦
             </StyledButton>}
             {isLinkable && !isConstructor ? <StyledA
-                    href={`https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/${name}`}>
-                    {` ${name} `}</StyledA>
+                    href={`https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/${item.name}`}>
+                    {` ${item.name} `}</StyledA>
                 : isLinkable && isConstructor ? <StyledA
-                        href={`https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/${name}`}>
-                        {` ${name} `} </StyledA>
-                    : ` ${name}`}
+                        href={`https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/${item.name}`}>
+                        {` ${item.name} `} </StyledA>
+                    : ` ${item.name}`}
 
             {isMovable && <StyledButton onClick={changeTypeToN}>
                 ⇨
@@ -74,7 +64,6 @@ const Item = ({item, isMain, isMovable = true, isLinkable = true, isConstructor,
             </StyledButtonRemove>}
 
         </StyledLi>
-
 
     );
 };

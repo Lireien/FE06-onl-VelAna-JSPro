@@ -1,4 +1,4 @@
-import Tests from "../Tests";
+import Game from "../Game";
 import {Route, Switch} from "react-router-dom";
 import Methods from "../Methods";
 import {LINK_PATH} from "../../../helpers/routes";
@@ -16,7 +16,7 @@ const Main = () => {
             <Breadcrumbs/>
             <Switch>
                 <Route exact path={LINK_PATH.home} component={Home}/>
-                <Route path={LINK_PATH.tests} component={Tests}/>
+                <Route path={LINK_PATH.game} component={Game}/>
                 <Route path={LINK_PATH.methods}>
                     <Methods/>
                 </Route>

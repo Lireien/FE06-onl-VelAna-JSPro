@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "./logo";
 import HeaderTitle from "./headerTitle";
 import {TITLE_HEADER} from "../../const";
@@ -17,7 +16,7 @@ const Header = () => {
                     Home
                 </StyledNavLink>
                 <StyledNavLink to={LINK_PATH.counter}>Counter</StyledNavLink>
-                <StyledNavLink to={LINK_PATH.tests}>Tests</StyledNavLink>
+                <StyledNavLink to={LINK_PATH.game}>Game</StyledNavLink>
                 <StyledNavLink to={LINK_PATH.methods}>Methods</StyledNavLink>
                 <StyledNavLink to={LINK_PATH.solution}>Solution</StyledNavLink>
             </StyledRow>

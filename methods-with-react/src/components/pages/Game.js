@@ -2,7 +2,7 @@ import List from "../List";
 import { LIST_TYPES } from "../../const";
 import StyledSection from "./StyledSection";
 
-const Tests = () => {
+const Game = () => {
   return (
     <StyledSection>
       <List title={LIST_TYPES.MUTATING}/>
@@ -11,4 +11,4 @@ const Tests = () => {
     </StyledSection>
   );
 };
-export default Tests;
+export default Game;

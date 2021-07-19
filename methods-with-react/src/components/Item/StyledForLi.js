@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const StyledLi = styled.li`
   position: relative;
   cursor: pointer;
@@ -26,7 +27,7 @@ export const StyledButton = styled.button`
 `;
 export const StyledButtonRemove = styled(StyledButton)`
   position: absolute;
-  right: -3em;
+  right: -2.5em;
   color: red;
   font-weight: bold;
 `;
