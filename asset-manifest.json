@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/css/main.b7081fdf.chunk.css",
+    "main.js": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/main.5dbe9a17.chunk.js",
+    "main.js.map": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/main.5dbe9a17.chunk.js.map",
+    "runtime-main.js": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/runtime-main.d3f4e5af.js",
+    "runtime-main.js.map": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/runtime-main.d3f4e5af.js.map",
+    "static/js/2.88563e08.chunk.js": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/2.88563e08.chunk.js",
+    "static/js/2.88563e08.chunk.js.map": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/2.88563e08.chunk.js.map",
+    "static/js/3.9b31a201.chunk.js": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/3.9b31a201.chunk.js",
+    "static/js/3.9b31a201.chunk.js.map": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/3.9b31a201.chunk.js.map",
+    "index.html": "/FE06-onl-VelAna-JSProReact/methods-with-react/index.html",
+    "static/css/main.b7081fdf.chunk.css.map": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/css/main.b7081fdf.chunk.css.map",
+    "static/js/2.88563e08.chunk.js.LICENSE.txt": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/js/2.88563e08.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/media/Orbitron-Regular.782e6861.ttf",
+    "static/media/logo.6ce24c58.svg": "/FE06-onl-VelAna-JSProReact/methods-with-react/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3f4e5af.js",
+    "static/js/2.88563e08.chunk.js",
+    "static/css/main.b7081fdf.chunk.css",
+    "static/js/main.5dbe9a17.chunk.js"
+  ]
+}
